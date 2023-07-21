@@ -1,0 +1,777 @@
+fileFormatVersion: 2
+guid: 58ef64c7cdf6c3548880e74c2e5fad96
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: All_Steel
+    second: {fileID: 2100000, guid: d6abb5a25cb71ea4b9d896cd73654d48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Back_wall_screen
+    second: {fileID: 2100000, guid: 5de1f167c6dd8114692cbb0f401ba28c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bllomfield_glow1
+    second: {fileID: 2100000, guid: 86fcc83ef72a0224194710d8d6fddf7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bridge_Fan_Zone
+    second: {fileID: 2100000, guid: 5422dedea0f3e58409e3dbaeb9af480a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bridge_pattern
+    second: {fileID: 2100000, guid: be33fb7adf9698241908e24aa213c02a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Celling_Wood1
+    second: {fileID: 2100000, guid: dc0042b1b2858094b986286633c69b96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Celling_light_glow1
+    second: {fileID: 2100000, guid: 3cde0928a5734e44fa17531427a74d90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair_line_01
+    second: {fileID: 2100000, guid: f9a2fb6d5cfc04d4a8d6cca544e04770, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair_line_02
+    second: {fileID: 2100000, guid: d23272d6c27f13a44a7acd6b350b7b9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair_line_03
+    second: {fileID: 2100000, guid: 85cf95f4e49fa3f44aaf2d310b029d84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair_line_04
+    second: {fileID: 2100000, guid: ed4a2043f992e5444bf7cae3d8d26b22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concret_mid_stairs
+    second: {fileID: 2100000, guid: 37763eecea9e876469519e56f313cbe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete_border
+    second: {fileID: 2100000, guid: d84d869b73078b84582c299870f61338, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete_wall_border1
+    second: {fileID: 2100000, guid: 9ba5049fdec0aae4d876a5c4124b3061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curved_led_screen1
+    second: {fileID: 2100000, guid: 963ae526ff3f56c4282759213c34bb99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curved_led_screen_2
+    second: {fileID: 2100000, guid: 95e809181f954ae4d8eebe96e914e41f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curved_led_screen_base_metal
+    second: {fileID: 2100000, guid: 5cbee41b37dc3764686dfda178e78670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark_floor_concrete
+    second: {fileID: 2100000, guid: 1b3ba23efa028944597482c30bf15a65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_Frame_texture1
+    second: {fileID: 2100000, guid: 886c434ec0ac4ef43a75c86dbdf0ac6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_Handle_with_celling_light_metal1
+    second: {fileID: 2100000, guid: 5d6cfc04f2612194db1ebbbf6c566022, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dotted_line1
+    second: {fileID: 2100000, guid: d5162cd932904ff4ab96dc1aac3a8857, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan_Zone_Glass_Door
+    second: {fileID: 2100000, guid: 972481297a4175942978b3b2013d0d4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan_zone_Cafe_Wall
+    second: {fileID: 2100000, guid: 3e2e7eb1e98f9ee4087538fdc30f1aa0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan_zone_Tunnel
+    second: {fileID: 2100000, guid: f88e22160a9a9014696fb6be87e7d41d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan_zone_cafe
+    second: {fileID: 2100000, guid: 3ed67290b9dd7da4ebc7d02c03d5ea8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan_zone_glass
+    second: {fileID: 2100000, guid: 559bc4c64daa57541ab4886dd71ddb8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag1_front_yellow
+    second: {fileID: 2100000, guid: 5e7d38433ee562647abe976510515269, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag1_side_yellow
+    second: {fileID: 2100000, guid: afdd81765e274dc47a4fccaef329803b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag2_front_blue
+    second: {fileID: 2100000, guid: c4a5f8cf7a82523478a0bddbbe05376d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag2_side_blue
+    second: {fileID: 2100000, guid: c79810531f92e8a4bbc69e580cc7e6bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag3_blue_yellow
+    second: {fileID: 2100000, guid: af44d641a5c60374092ba60420498d00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag_front_logo1
+    second: {fileID: 2100000, guid: 770967944290e5f48b8def31c8e7fa68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flags_standee_80_200
+    second: {fileID: 2100000, guid: f4bf5bd4aa3798341b27babf16fe8d96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor_texture1
+    second: {fileID: 2100000, guid: 3e6486aad36466544bdbf84ffce363c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Football_goal_Net
+    second: {fileID: 2100000, guid: 38fcdbb010d6dcd44b705dcb433fc740, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fun_zone_Floor
+    second: {fileID: 2100000, guid: d327497fb7606e34e98aca030f2221ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass2
+    second: {fileID: 2100000, guid: 4eb353b0d92ea3f4984f88cfebe4c60f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass_3
+    second: {fileID: 2100000, guid: c4ead4aebebc84e4c9bf53444c94a89c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Goa_net_steel
+    second: {fileID: 2100000, guid: 69819be9bbc474b4fa2a3e6f7c193b72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground_center_Dot
+    second: {fileID: 2100000, guid: f8ebc522716dd9341a4ce2a3aefc1009, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground_grass1
+    second: {fileID: 2100000, guid: 069b3b640faa6d94b908b506be24812f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground_grass2
+    second: {fileID: 2100000, guid: 0061f52a8ab794048b7202f9723dcc17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground_grass_02
+    second: {fileID: 2100000, guid: 6f13f1c379f2e8a4ca83dda0f4258f60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle
+    second: {fileID: 2100000, guid: e242f782ed100054ca1179cc2ae03cee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ld_screen1
+    second: {fileID: 2100000, guid: 269850ec199cec143b021debf699971b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Led_Tv_screen1
+    second: {fileID: 2100000, guid: ebca4cc1c097a5047929b78646f27cf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Led_Tv_screen2
+    second: {fileID: 2100000, guid: c248fe6bbf8c52941aada18eae4c9e58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Led_tv_screen_base
+    second: {fileID: 2100000, guid: 07774161608a8984487ec104e07430db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Logo2
+    second: {fileID: 2100000, guid: 47bf0293bc192974aacddef6758bd6c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Macabi_Logo1
+    second: {fileID: 2100000, guid: c68c5547184984c4aa0279df3ac558e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pillar
+    second: {fileID: 2100000, guid: 7a5461f9e8a04a849ae174abd2c2cf0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Chair
+    second: {fileID: 2100000, guid: 4dcf6e9ab3a47564ba4fa95c656c2b4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Seating_Wall
+    second: {fileID: 2100000, guid: 659167a7f5237554a93a57f1d1a16a96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sewage
+    second: {fileID: 2100000, guid: ac8acf19f6958a54180f69667b8c57b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sponsor_screen2
+    second: {fileID: 2100000, guid: c6678b24dce83084383efea5303fdf3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stadium_floor1
+    second: {fileID: 2100000, guid: acf9e1dc6656a3d49a4fb9623b640102, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stadium_light_base
+    second: {fileID: 2100000, guid: 77b7242d531019c40a7071a14cec38f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stadium_lights_glow
+    second: {fileID: 2100000, guid: 40204e537cbfbf841911c928aaeff838, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_steps
+    second: {fileID: 2100000, guid: 2b6a63e45d571fc4db6bf9d7e7bb35b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stairs_Concrete
+    second: {fileID: 2100000, guid: c822784791e66b24b8f2d5eebc670761, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stairs_and_rows
+    second: {fileID: 2100000, guid: 061b1df727be4c6479bde3fae926f4a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stande_flags_stand1
+    second: {fileID: 2100000, guid: c2b3625ba9c41754bb5d09ca9f18a4c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standee_flags_80_101
+    second: {fileID: 2100000, guid: daf4fd8a0af47db4197fbe11a043e66e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steel_Stair
+    second: {fileID: 2100000, guid: 560c9eb571a658c4fb579998541f59ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tunnel_bg
+    second: {fileID: 2100000, guid: e0db9b157d14f1f4788f26a70a5fb9ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tunnel_gates_wall1
+    second: {fileID: 2100000, guid: 1cd682941ba94d64c940b106d04e2e16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tunnel_with_stairs
+    second: {fileID: 2100000, guid: ab0be6e69ac1c38428787b3649ed5236, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall2
+    second: {fileID: 2100000, guid: 90ed57f59ede53d4faa348c52db27bdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_Concrete1
+    second: {fileID: 2100000, guid: 7209225ec2a8a2a4d9613a922b4dcc4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White_line1
+    second: {fileID: 2100000, guid: dd4571ed5075e074890b7aa819d44ab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: armrest
+    second: {fileID: 2100000, guid: cba4672bf6028ad4ea1eae55abfda822, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bridge_fan
+    second: {fileID: 2100000, guid: 00192a17d025dfe419f694eab7e8ce4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chairs
+    second: {fileID: 2100000, guid: b069a0d603e99704aa0cdd22c07d57b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor_concrete1
+    second: {fileID: 2100000, guid: be2987cdaa338f24fb620c83c98d19a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 88856c9e3c7dc2e4fa61d3387482ebe6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass2
+    second: {fileID: 2100000, guid: 50974f2b9e91d16409e99c7a89dbacb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass3
+    second: {fileID: 2100000, guid: a743b7be81d982147abd47ce6c94f89c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: logo3
+    second: {fileID: 2100000, guid: 5c0894a328a61e84c95bc0a9ebdeee6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: outer_wall_concrete
+    second: {fileID: 2100000, guid: 84f25ce752f4d1840aeb0a93e9d32cac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Wall_Concrete1
+    second: {fileID: 2100000, guid: 5792b2f0a15411d4bacbf850cd4af2f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sponsor_Screen_base1
+    second: {fileID: 2100000, guid: eaaf322a5631e444c885879951aa1e70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table_chair_steel
+    second: {fileID: 2100000, guid: 538fc14500f955d45a2c5c5b07c8695e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table_chair_white
+    second: {fileID: 2100000, guid: 7c37ee70cd514ba4396dc69ce51f21ba, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 'Bridge_ FanZone '
+    second: {fileID: 2800000, guid: 3ee18a1746390f74eab6ae0cb6c91795, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Celling_Wood2
+    second: {fileID: 2800000, guid: 3f23e74bb20c3464bbd5b614cdd8bb83, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Concrete mid stairs
+    second: {fileID: 2800000, guid: 286211eeb5747424cb12a12592d0bf7c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Curved led screen1
+    second: {fileID: 2800000, guid: 1657a97158e7a0c4c95333610f186a16, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Curved led screen2
+    second: {fileID: 2800000, guid: 91dd108b00511264cb339b96c4109fb6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dark floor concrete
+    second: {fileID: 2800000, guid: 084b1bb14915bb741a476bb1c77f03a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dark green
+    second: {fileID: 2800000, guid: 4fd1e0a7161e2eb4a8ecc10f3ddd8b60, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Door_frame_texture
+    second: {fileID: 2800000, guid: b5fea8f76b77fc04aad903a28cec824d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fan Zone Glass Door
+    second: {fileID: 2800000, guid: 61e223384c3758741b4fd49b30b908fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FanZone Floor
+    second: {fileID: 2800000, guid: c81f56d933d88e941a23dd02ea088373, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fan_zone_Tunnel
+    second: {fileID: 2800000, guid: 33546df76febc33438e13fbcb407bb0e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 'Fanzone Cafe '
+    second: {fileID: 2800000, guid: 964d982e468a608489646b6eb6c29d75, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flag1_yellow
+    second: {fileID: 2800000, guid: 622a1314dbd36834f9fd9a174857f9d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flag2_blue
+    second: {fileID: 2800000, guid: 869b19921d4b95e4b99a6901cc089843, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flag3_yellow blue
+    second: {fileID: 2800000, guid: 92e300d75f55e8143a03e1e52750714f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Floor  concrete
+    second: {fileID: 2800000, guid: 14fdf179b1309164a80abcd2450fe9b6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Floor_texture
+    second: {fileID: 2800000, guid: da66a124a2e17024cb2288357d0cf9e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Football_goal Net
+    second: {fileID: 2800000, guid: 05e2598a92b6ef34d9b65c21d0cdd407, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2800000, guid: 5f0b047bb2f90f8408ee7b167face79f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 'Ground center Dot '
+    second: {fileID: 2800000, guid: 962d8d5e8b0ed5548b16e9f0b99b2da0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Led screen base
+    second: {fileID: 2800000, guid: f4b89f219891ee1459c8689ec32deb00, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Logo
+    second: {fileID: 2800000, guid: f9a7eff15e000144d9e46811310be70c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Macabi logo
+    second: {fileID: 2800000, guid: d6a2b360dc6198340bc264f31c5c9329, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Main Seeting
+    second: {fileID: 2800000, guid: 66270d71d39f26a44963aae0c9595ec4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Outer wall
+    second: {fileID: 2800000, guid: 75d4ff43de7f4dc47946c29fc4aa601e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pillar
+    second: {fileID: 2800000, guid: 6f48f3954c767664a8de189f2a4e46d1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Player_Chair_BaseColor
+    second: {fileID: 2800000, guid: 6c03cfd85ba2ebf47999a37e764a0647, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sewer
+    second: {fileID: 2800000, guid: b9f86b39a24761443a39aefa5f3280d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sponsor fila_01
+    second: {fileID: 2800000, guid: 183fd916842ccc246a55d4137616df39, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Stadium floor
+    second: {fileID: 2800000, guid: b7db72590f0a5c84cb3e4daa48f6fb05, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Stairs Concrete
+    second: {fileID: 2800000, guid: 99be8439a2ab8934ba3da5acf54c5a75, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Stairs and rows
+    second: {fileID: 2800000, guid: 33011bfa0c568394bb4a3b41963e7641, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Standee flags_80_100
+    second: {fileID: 2800000, guid: c6d9495cbbfaa7f4b8060212b9a3e7e6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Standee flags_80_200
+    second: {fileID: 2800000, guid: d6d911793d0c2e94eabe41cbe3729492, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Steel stair
+    second: {fileID: 2800000, guid: a06538bf46353a84e81b1de2ddd78409, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tunnel with stairs
+    second: {fileID: 2800000, guid: 943cb8ecb32f30148b328320fbb4fa70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tunnel_gates_wall
+    second: {fileID: 2800000, guid: 0b8459b92c012524ea32a1f34b80118d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tv screen1
+    second: {fileID: 2800000, guid: 33d34308472bc11419c0362bb6079cd7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tv screen2
+    second: {fileID: 2800000, guid: 121a087216760e64e8f6eb8badd46893, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall and Celling
+    second: {fileID: 2800000, guid: 043c9cc7ad21ae940b19b6199d4bfed6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_Concrete
+    second: {fileID: 2800000, guid: a0a0bb498c88ebb49bdfd40ef1abc720, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: White line
+    second: {fileID: 2800000, guid: 36de146f15048954ebf56a32ec940ecd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bridge pattern
+    second: {fileID: 2800000, guid: c2bdabfc696528e4398b17dd979d15af, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chair line_01
+    second: {fileID: 2800000, guid: 112a0c874832b6543adb91ff5b29958d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chair_line_02
+    second: {fileID: 2800000, guid: 284dc309466c97b4eb30bc55da6a4184, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chair_line_03
+    second: {fileID: 2800000, guid: 85092414f41f7d44fae0c2c818337161, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chairs
+    second: {fileID: 2800000, guid: 3b93eb9385aec33418a6f4e9449a83d2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concrete wall border
+    second: {fileID: 2800000, guid: 25eb520079d12f24395b3adc2a6e4d9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: light green
+    second: {fileID: 2800000, guid: 4b40e648cb4f236418f3b7eaf20cc147, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: side green color
+    second: {fileID: 2800000, guid: 988910d2207c9174c84f7e6562eed793, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stair_steps
+    second: {fileID: 2800000, guid: 2cab5525acc4fd449962ddf52affd42f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tunnel bg1
+    second: {fileID: 2800000, guid: 14e10e0633dda3148b76c9ad70b6fdad, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
