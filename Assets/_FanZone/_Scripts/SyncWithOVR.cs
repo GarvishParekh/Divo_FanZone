@@ -1,10 +1,11 @@
 using Photon.Pun;
-using Unity.Mathematics;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class SyncWithOVR : MonoBehaviour
 {
     PhotonView photonView;
+
     [Header ("OVR Components")]
     [SerializeField] private Transform OvrPlayerController;
     [SerializeField] private Transform OvrCameraRig;
@@ -23,13 +24,15 @@ public class SyncWithOVR : MonoBehaviour
     public Vector3 positionOffset_L;
     [SerializeField] private Vector3 rotationOffset_L;
 
-
     [Space]
     [SerializeField] private Transform M_HandAnchor_R;
     [SerializeField] private Vector3 positionOffset_R;
     [SerializeField] private Vector3 rotationOffset_R;
 
     [SerializeField] private quaternion rotationOffset;
+
+    Vector3 headPosition = Vector3.zero;
+
 
     private void Start()
     {
@@ -47,10 +50,13 @@ public class SyncWithOVR : MonoBehaviour
             return;
         }
 
-        SetPositionAndRotation(M_PlayerController, OvrPlayerController, false, true, controllerOffsetValue);
+        //SetPositionAndRotation(M_PlayerController, OvrPlayerController, false, true, controllerOffsetValue);
 
-        SetPositionAndRotation(M_HandAnchor_L, OvrHandAnchor_L, true, positionOffset_L, rotationOffset_L);
-        SetPositionAndRotation(M_HandAnchor_R, OvrHandAnchor_R, true, positionOffset_R, rotationOffset_R);
+        //SetPositionAndRotation(M_HandAnchor_L, OvrHandAnchor_L, true, positionOffset_L, rotationOffset_L);
+        //SetPositionAndRotation(M_HandAnchor_R, OvrHandAnchor_R, true, positionOffset_R, rotationOffset_R);
+
+        SetHead();
+        SetHands();
     }
 
     private void GetOVRPoints()
@@ -122,5 +128,24 @@ public class SyncWithOVR : MonoBehaviour
             toChange.localRotation = target.rotation * Quaternion.EulerAngles(rotationOffset);
 
         }
+    }
+
+    private void SetHands()
+    {
+        M_HandAnchor_L.position = OvrHandAnchor_L.TransformPoint(positionOffset_L);
+        M_HandAnchor_L.rotation = OvrHandAnchor_L.rotation * Quaternion.Euler(rotationOffset_L);
+
+        M_HandAnchor_R.position = OvrHandAnchor_R.TransformPoint(positionOffset_R);
+        M_HandAnchor_R.rotation = OvrHandAnchor_R.rotation * Quaternion.Euler(rotationOffset_R);
+    }
+
+    private void SetHead()
+    {
+        headPosition.x = OvrCameraRig.position.x;
+        headPosition.y = OvrPlayerController.position.y + controllerOffsetValue.y;
+        headPosition.z = OvrCameraRig.position.z;
+
+        M_PlayerController.position = headPosition;
+        M_PlayerController.forward = Vector3.ProjectOnPlane(OvrCameraRig.forward, Vector3.up);
     }
 }

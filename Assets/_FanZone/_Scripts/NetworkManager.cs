@@ -65,7 +65,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
-        //T_connectionStatus.text = $"Left room: <b>{PhotonNetwork.CurrentRoom.Name}";
         PhotonNetwork.Destroy(playerPrefab);
     }
 }

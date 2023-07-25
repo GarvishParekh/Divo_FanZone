@@ -7,39 +7,13 @@ AvatarMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Character Mask
-  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000001000000010000000100000001000000
+  m_Mask: 00000000000000000000000001000000010000000000000000000000000000000000000001000000010000000100000001000000
   m_Elements:
   - m_Path: 
     m_Weight: 1
-  - m_Path: Body_BS
+  - m_Path: Alpha_Joints
     m_Weight: 1
-  - m_Path: Body_Male
-    m_Weight: 1
-  - m_Path: Body_Male/Body
-    m_Weight: 1
-  - m_Path: Body_Male/Left_Eye
-    m_Weight: 1
-  - m_Path: Body_Male/Right_Eye
-    m_Weight: 1
-  - m_Path: Default_Clothes_BS
-    m_Weight: 1
-  - m_Path: Default_Jogger
-    m_Weight: 1
-  - m_Path: Default_T_shirt_geo
-    m_Weight: 1
-  - m_Path: Facial_expressions_BS
-    m_Weight: 1
-  - m_Path: Footwears
-    m_Weight: 1
-  - m_Path: Footwears/Pair_01
-    m_Weight: 1
-  - m_Path: Footwears/Pair_01/Pair_01_Left_geo
-    m_Weight: 1
-  - m_Path: Footwears/Pair_01/Pair_01_Right_geo
-    m_Weight: 1
-  - m_Path: Hairs_grp
-    m_Weight: 1
-  - m_Path: Hairs_grp/Hair_01
+  - m_Path: Alpha_Surface
     m_Weight: 1
   - m_Path: mixamorig:Hips
     m_Weight: 1
