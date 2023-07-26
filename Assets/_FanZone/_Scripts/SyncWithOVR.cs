@@ -33,6 +33,11 @@ public class SyncWithOVR : MonoBehaviour
 
     Vector3 headPosition = Vector3.zero;
 
+    [Header("Animations components")]
+    [SerializeField] private Animator handAnimation;
+
+
+
 
     private void Start()
     {
@@ -57,6 +62,8 @@ public class SyncWithOVR : MonoBehaviour
 
         SetHead();
         SetHands();
+
+    
     }
 
     private void GetOVRPoints()
