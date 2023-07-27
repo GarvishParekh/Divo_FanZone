@@ -5,22 +5,33 @@ public class HandAnimation : MonoBehaviour
 {
     [SerializeField] PhotonView photonView;
 
-    [SerializeField] private enum HandTags
+    public enum HandActions
     {
-        yoo,
-        victory
+        YoAction,
+        VictoryAction,
+        ThumbsUp
     }
-    [SerializeField] private HandTags handTags;
+    [SerializeField] private HandActions handActions;
 
     [Header("Animation components")]
     [SerializeField] Animator handAnimation;
+
+    [Space]
+    [SerializeField] string handAnimationString_L;
+    [SerializeField] string handAnimationString_R;
 
     [Header("Animation tags")]
     [SerializeField] string yoo_L;
     [SerializeField] string yoo_R;
     [SerializeField] string victory_L;
     [SerializeField] string victory_R;
+    [SerializeField] string thumbs_L;
+    [SerializeField] string thumbs_R;
 
+    [Header("User interface")]
+    [SerializeField] private GameObject[] selectedIcon;
+
+    private void Start() => _ChangeHandAction(0);
 
     private void Update()
     {
@@ -29,67 +40,62 @@ public class HandAnimation : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-            handAnimation.SetBool(HandAnimationTag_L(), true);
+            handAnimation.SetBool(HandAction("Left"), true);
         }
         else if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
         {
-            handAnimation.SetBool(HandAnimationTag_L(), false);
+            handAnimation.SetBool(HandAction("Left"), false);
         }
 
         if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {
-            handAnimation.SetBool(HandAnimationTag_R(), true);
+            handAnimation.SetBool(HandAction("Right"), true);
         }
         else if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
-            handAnimation.SetBool(HandAnimationTag_R(), false);
+            handAnimation.SetBool(HandAction("Right"), false);
         }
     }
 
-    private string HandAnimationTag_L()
+    private string HandAction(string hand)
     {
-        if (handTags == HandTags.yoo)
+        if (hand == "Left")
         {
-            return yoo_L;
+            if (handActions == HandActions.YoAction)
+                return yoo_L;
+            else if (handActions == HandActions.VictoryAction)
+                return victory_L;
+            else if (handActions == HandActions.ThumbsUp)
+                return thumbs_L;
+            else return null;
         }
-        else if (handTags == HandTags.victory)
+        
+        else if (hand == "Right")
         {
-            return victory_L; 
+            if (handActions == HandActions.YoAction)
+                return yoo_R;
+            else if (handActions == HandActions.VictoryAction)
+                return victory_R;
+            else if (handActions == HandActions.ThumbsUp)
+                return thumbs_R;
+            else return null;
         }
-        else
-        {
-            return null;
-        }
+        
+        else return null;
     }
 
-    private string HandAnimationTag_R()
+    public void _ChangeHandAction(int _index)
     {
-        if (handTags == HandTags.yoo)
-        {
-            return yoo_R;
-        }
-        else if (handTags == HandTags.victory)
-        {
-            return victory_R;
-        }
-        else
-        {
-            return null;
-        }
+        CloseAllImages();
+        handActions = (HandActions)_index;
+        selectedIcon[_index].SetActive(true);
     }
 
-    public void _ChangeGesture(int _index)
+    private void CloseAllImages()
     {
-        if (photonView.IsMine)
+        for (int i = 0; i < selectedIcon.Length; i++)
         {
-            if (_index == 0)
-            {
-                handTags = HandTags.yoo;
-            }
-            else if (_index == 1)
-            {
-                handTags = HandTags.victory;
-            }
+            selectedIcon[i].SetActive(false);
         }
     }
 }
