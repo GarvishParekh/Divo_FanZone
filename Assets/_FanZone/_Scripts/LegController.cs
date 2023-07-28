@@ -8,12 +8,12 @@ public class LegController : MonoBehaviour
 
     [Header ("Animation components")]
     [SerializeField] private Animator playerAnimation;
-    [SerializeField] float playerSpeed;
+    [SerializeField] private float playerSpeed;
 
     [Header ("Animation tags")]
-    [SerializeField] string walking;
-    [SerializeField] string forwardSpeed;
-    [SerializeField] string sideSpeed;
+    [SerializeField] private string walking;
+    [SerializeField] private string forwardSpeed;
+    [SerializeField] private string sideSpeed;
 
     [Header("Values")]
     [SerializeField] private float input_X;
@@ -37,6 +37,5 @@ public class LegController : MonoBehaviour
             playerAnimation.SetFloat(forwardSpeed, input_Y);
             playerAnimation.SetFloat(sideSpeed, input_X);
         }
-
     }
 }

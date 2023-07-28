@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Network Player
+  - Network Voice Manager
   layers:
   - Default
   - TransparentFX

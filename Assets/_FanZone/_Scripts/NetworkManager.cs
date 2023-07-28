@@ -20,10 +20,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [Header ("PLUGIN")]
     [SerializeField] private HandResetController handController;
 
-    private void Start()
-    {
-        ConnectToPhotonNetwork();
-    }
+    private void Start() => ConnectToPhotonNetwork();
 
     private void Update()
     {
@@ -33,6 +30,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
 
+    #region Network connection
     private void ConnectToPhotonNetwork()
     {
         T_connectionStatus.text = "Connecting to network....";
@@ -44,7 +42,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         T_connectionStatus.text = "Connected to photon network \n <size=0.04> Joining room";
         JoinOrCreateRoom("Test Room");
     }
+    #endregion
 
+    #region Room connection
     private void JoinOrCreateRoom (string roomName)
     {
         RoomOptions roomOptions = new RoomOptions();
@@ -67,4 +67,5 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.Destroy(playerPrefab);
     }
+    #endregion
 }

@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class HandAnimation : MonoBehaviour
 {
-    [SerializeField] PhotonView photonView;
+    [SerializeField] private PhotonView photonView;
 
-    public enum HandActions
+    private enum HandActions
     {
         YoAction,
         VictoryAction,
@@ -14,19 +14,19 @@ public class HandAnimation : MonoBehaviour
     [SerializeField] private HandActions handActions;
 
     [Header("Animation components")]
-    [SerializeField] Animator handAnimation;
+    [SerializeField] private Animator handAnimation;
 
     [Space]
-    [SerializeField] string handAnimationString_L;
-    [SerializeField] string handAnimationString_R;
+    [SerializeField] private string handAnimationString_L;
+    [SerializeField] private string handAnimationString_R;
 
     [Header("Animation tags")]
-    [SerializeField] string yoo_L;
-    [SerializeField] string yoo_R;
-    [SerializeField] string victory_L;
-    [SerializeField] string victory_R;
-    [SerializeField] string thumbs_L;
-    [SerializeField] string thumbs_R;
+    [SerializeField] private string yoo_L;
+    [SerializeField] private string yoo_R;
+    [SerializeField] private string victory_L;
+    [SerializeField] private string victory_R;
+    [SerializeField] private string thumbs_L;
+    [SerializeField] private string thumbs_R;
 
     [Header("User interface")]
     [SerializeField] private GameObject[] selectedIcon;
@@ -59,6 +59,7 @@ public class HandAnimation : MonoBehaviour
 
     private string HandAction(string hand)
     {
+        #region Left hand animation
         if (hand == "Left")
         {
             if (handActions == HandActions.YoAction)
@@ -69,7 +70,9 @@ public class HandAnimation : MonoBehaviour
                 return thumbs_L;
             else return null;
         }
-        
+        #endregion
+
+        #region Right hand animation
         else if (hand == "Right")
         {
             if (handActions == HandActions.YoAction)
@@ -80,10 +83,12 @@ public class HandAnimation : MonoBehaviour
                 return thumbs_R;
             else return null;
         }
-        
+        #endregion
+
         else return null;
     }
 
+    #region Button functions
     public void _ChangeHandAction(int _index)
     {
         CloseAllImages();
@@ -98,4 +103,5 @@ public class HandAnimation : MonoBehaviour
             selectedIcon[i].SetActive(false);
         }
     }
+    #endregion
 }

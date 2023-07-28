@@ -37,14 +37,11 @@ public class SyncWithOVR : MonoBehaviour
     [SerializeField] private Animator handAnimation;
 
 
-
-
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
         if (!photonView.IsMine)
             return;
-
         GetOVRPoints();
     }
 
@@ -55,15 +52,7 @@ public class SyncWithOVR : MonoBehaviour
             return;
         }
 
-        //SetPositionAndRotation(M_PlayerController, OvrPlayerController, false, true, controllerOffsetValue);
-
-        //SetPositionAndRotation(M_HandAnchor_L, OvrHandAnchor_L, true, positionOffset_L, rotationOffset_L);
-        //SetPositionAndRotation(M_HandAnchor_R, OvrHandAnchor_R, true, positionOffset_R, rotationOffset_R);
-
-        SetHead();
-        SetHands();
-
-    
+        SetHandAndHead();
     }
 
     private void GetOVRPoints()
@@ -80,79 +69,23 @@ public class SyncWithOVR : MonoBehaviour
         }
     }
 
-    private void SetPositionAndRotation(Transform toChange, Transform target, bool isLocal, bool isCustomValues, Vector3 customValues)
+    private void SetHandAndHead()
     {
-        if (isLocal)
-        {
-            toChange.localPosition = target.localPosition;
-            toChange.localRotation = target.localRotation;
-        }
-        else
-        {
-            if (isCustomValues)
-            {
-                Vector3 newPosition = Vector3.zero;
-
-                newPosition.x = target.position.x + customValues.x;
-                newPosition.y = customValues.y;
-                newPosition.z = target.position.z + customValues.z;
-
-                toChange.position = newPosition;
-                toChange.rotation = target.rotation;
-            }
-            else
-            {
-                toChange.position = target.position;
-                toChange.rotation = target.rotation;
-            }
-        }
-    }
-
-    private void SetPositionAndRotation(Transform toChange, Transform target, bool isLocal)
-    {
-        if (isLocal)
-        {
-            toChange.position = target.position;
-            toChange.rotation = target.rotation;
-        }
-        else
-        {
-            toChange.localPosition = target.localPosition;
-            toChange.localRotation = target.localRotation;
-        }
-    }
-
-    private void SetPositionAndRotation(Transform toChange, Transform target, bool isLocal, Vector3 positionOffset, Vector3 rotationOffset)
-    {
-        if (isLocal)
-        {
-            toChange.position = target.position + positionOffset;
-            toChange.localRotation = target.rotation * Quaternion.EulerAngles(rotationOffset);
-        }
-        else
-        {
-            toChange.localPosition = target.localPosition + positionOffset;
-            toChange.localRotation = target.rotation * Quaternion.EulerAngles(rotationOffset);
-
-        }
-    }
-
-    private void SetHands()
-    {
+        #region Hands
         M_HandAnchor_L.position = OvrHandAnchor_L.TransformPoint(positionOffset_L);
         M_HandAnchor_L.rotation = OvrHandAnchor_L.rotation * Quaternion.Euler(rotationOffset_L);
 
         M_HandAnchor_R.position = OvrHandAnchor_R.TransformPoint(positionOffset_R);
         M_HandAnchor_R.rotation = OvrHandAnchor_R.rotation * Quaternion.Euler(rotationOffset_R);
-    }
+        #endregion
 
-    private void SetHead()
-    {
+        #region Head
         headPosition.x = OvrCameraRig.position.x;
         headPosition.y = OvrPlayerController.position.y + controllerOffsetValue.y;
         headPosition.z = OvrCameraRig.position.z;
 
         M_PlayerController.position = headPosition;
         M_PlayerController.forward = Vector3.ProjectOnPlane(OvrCameraRig.forward, Vector3.up);
+        #endregion
     }
 }
