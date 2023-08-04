@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Network Player
   - Network Voice Manager
+  - Football
   layers:
   - Default
   - TransparentFX
