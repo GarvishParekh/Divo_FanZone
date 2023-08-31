@@ -2,7 +2,6 @@ using TMPro;
 using Photon.Pun;
 using UnityEngine;
 using System.Collections;
-using System;
 
 public class PlayerTeleport : MonoBehaviour
 {
@@ -37,6 +36,8 @@ public class PlayerTeleport : MonoBehaviour
 
     private void Update()
     {
+        if (!photonView.IsMine)
+            return;
 
         if (isTeleproting)
             return;

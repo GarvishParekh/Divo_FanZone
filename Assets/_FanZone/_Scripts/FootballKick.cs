@@ -1,20 +1,26 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class FootballKick : MonoBehaviour
 {
+    [Header("Multiplayer")]
+    [SerializeField] private PhotonView photonView;
     [Header("Player")]
     [SerializeField] Transform playerTransform;
 
     [Header("Football")]
     [SerializeField] private string footballTag;
-
-    [Space]
     [SerializeField] private Rigidbody footballRigidBody;
 
-    [Range(50, 1000)]
+    [Space]
+    [Range(0, 20)]
     [SerializeField] private float footballForwardForce;
-    [Range(50, 1000)]
+    [Range(0, 20)]
     [SerializeField] private float footballUpwardsForce;
+
+    [Header("Sound components")]
+    [SerializeField] private AudioSource footballKickSound;
+    [SerializeField] private AudioClip[] footballKickClip;
 
     private void OnTriggerEnter(Collider objectsCollider)
     {
@@ -23,8 +29,13 @@ public class FootballKick : MonoBehaviour
             footballRigidBody = objectsCollider.gameObject.GetComponent<Rigidbody>();
             if (footballRigidBody != null)
             {
-                footballRigidBody.AddForce(playerTransform.forward * footballForwardForce * Time.deltaTime, ForceMode.Impulse);
-                footballRigidBody.AddForce(playerTransform.up * footballUpwardsForce * Time.deltaTime, ForceMode.Impulse);
+                footballRigidBody.velocity = transform.forward * footballForwardForce + playerTransform.up * footballUpwardsForce;
+            }
+
+            if(photonView.IsMine)
+            {
+                int _random = Random.Range(0, footballKickClip.Length);
+                footballKickSound.PlayOneShot(footballKickClip[_random]);
             }
         }
     }
