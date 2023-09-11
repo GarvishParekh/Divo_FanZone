@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class CharacterSpawnSimultation : MonoBehaviour
 {
+    [SerializeField] private bool spawnPlayers = false;
+
+    [Space]
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private float spawnCount;
 
@@ -15,6 +18,8 @@ public class CharacterSpawnSimultation : MonoBehaviour
 
     private void Start()
     {
+        if (!spawnPlayers) return;
+
         for (int i = 0; i < spawnCount; i++)
         {
             xPosition = Random.Range(xRange.x, xRange.y);

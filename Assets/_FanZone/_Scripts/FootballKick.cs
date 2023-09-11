@@ -5,6 +5,7 @@ public class FootballKick : MonoBehaviour
 {
     [Header("Multiplayer")]
     [SerializeField] private PhotonView photonView;
+
     [Header("Player")]
     [SerializeField] Transform playerTransform;
 

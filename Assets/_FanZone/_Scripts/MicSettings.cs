@@ -2,11 +2,11 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Voice.Unity;
-using Meta.WitAi;
 
 public class MicSettings : MonoBehaviour
 {
-    private PhotonView photonView;
+    [Header ("Multiplayer")]
+    [SerializeField] private PhotonView photonView;
 
     [Header ("[Get run time]")]
     [SerializeField] private Recorder networkVoiceManager;
@@ -34,9 +34,9 @@ public class MicSettings : MonoBehaviour
         if (photonView.IsMine)
         {
             networkVoiceManager = GameObject.FindGameObjectWithTag("Network Voice Manager").GetComponent<Recorder>();
+            Invoke("ShowMicUI", 2.1f);
         }
 
-        Invoke("ShowMicUI", 2.1f);
     }
 
     void ShowMicUI()
