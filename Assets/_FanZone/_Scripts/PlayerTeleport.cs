@@ -24,6 +24,7 @@ public class PlayerTeleport : MonoBehaviour
     private WaitForSeconds oneSecond = new WaitForSeconds(1);
 
     [SerializeField] private bool isTeleproting = false;
+    [SerializeField] private bool teloportWithButtons = false;
 
     WaitForSeconds thirtySeconds = new WaitForSeconds(4);
 
@@ -44,16 +45,15 @@ public class PlayerTeleport : MonoBehaviour
         if (isTeleproting)
             return;
 
-        if (Input.GetKeyDown(KeyCode.L) || OVRInput.Get(OVRInput.Button.One))
-        {
-            Debug.Log("Pressed");
+        if (!teloportWithButtons) return;
+        
+        // Teleport to the balcony
+        if (OVRInput.Get(OVRInput.Button.One)) 
             GroundToBalconyTeleport();
-        }
 
+        // Teleport to the ground
         else if (OVRInput.Get(OVRInput.Button.Two))
-        {
             SpawnBackToGround();
-        }
     }
 
     private void ToggleCanvas()

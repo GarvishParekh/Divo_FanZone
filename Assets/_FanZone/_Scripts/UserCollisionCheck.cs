@@ -11,13 +11,12 @@ public class UserCollisionCheck : MonoBehaviour
     [SerializeField] private PlayerTeleport playerTeleportInstance;
 
     [Space]
-    [SerializeField] private string apiData;
-    WaitForSeconds thirtySeconds = new WaitForSeconds(5);
-
     public string getUserURL;
+    [Space]
+    [SerializeField] private string apiData;
     [SerializeField] private string userIDToCall;
-
     [SerializeField] private UserData userData;
+    WaitForSeconds thirtySeconds = new WaitForSeconds(5);
 
 
     private void OnTriggerExit(Collider other)

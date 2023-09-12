@@ -4,16 +4,13 @@ using UnityEngine;
 public class PlayerID : MonoBehaviour
 {
     public int playerID;
-    [SerializeField] private PhotonView photonView;
     [SerializeField] private GameObject C_playerID;
     
     public bool isPlayer = false;
 
     public void SetPlayerID (int _id)
     {
-        if (!photonView.IsMine) return;
-
-
+        Debug.Log("Button Pressed");
         playerID = _id;
         C_playerID.SetActive(false);
     }
