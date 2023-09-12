@@ -2,10 +2,13 @@ using TMPro;
 using Photon.Pun;
 using UnityEngine;
 using Photon.Realtime;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private UnityEvent PlayerConnected;
+
     [SerializeField] private string playerPrefabName;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject playerPrefab;
@@ -54,6 +57,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         roomOptions.IsOpen = true;
 
         PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
+
     }
 
     public override void OnJoinedRoom()
@@ -61,11 +65,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         T_connectionStatus.text = $"Connected to: <b>{PhotonNetwork.CurrentRoom.Name}";
         playerPrefab = PhotonNetwork.Instantiate(playerPrefabName, transform.position, Quaternion.identity);
         handController.GetNetworkPlayer(playerPrefab);
+
+        PlayerConnected?.Invoke();
     }
+
 
     public override void OnLeftRoom()
     {
         PhotonNetwork.Destroy(playerPrefab);
     }
-    #endregion
+    #endregion  
 }

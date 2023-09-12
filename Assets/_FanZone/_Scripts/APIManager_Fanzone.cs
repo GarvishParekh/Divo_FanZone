@@ -11,8 +11,8 @@ public class APIManager_Fanzone : MonoBehaviour
     [SerializeField] private string fanzoneData;
 
     [Space]
-    [SerializeField] private string authToken;
-    [SerializeField] private string acceptToken;
+    public string authToken;
+    public string acceptToken;
 
     [Space]
     public myData myData;
@@ -34,7 +34,6 @@ public class APIManager_Fanzone : MonoBehaviour
         if(request.error == null)
         {
             fanzoneData = request.downloadHandler.text;
-            Debug.Log($"Api Data: {fanzoneData}");
 
             myData = JsonUtility.FromJson<myData>(fanzoneData);
 
@@ -46,11 +45,11 @@ public class APIManager_Fanzone : MonoBehaviour
 [System.Serializable]
 public class myData
 {
-    public Data[] data;
+    public MyData[] data;
 }
 
 [System.Serializable]
-public class Data
+public class MyData
 {
     public string id;
     public string name;

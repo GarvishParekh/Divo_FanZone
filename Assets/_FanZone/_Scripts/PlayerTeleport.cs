@@ -25,6 +25,8 @@ public class PlayerTeleport : MonoBehaviour
 
     [SerializeField] private bool isTeleproting = false;
 
+    WaitForSeconds thirtySeconds = new WaitForSeconds(4);
+
 
     private void Start()
     {
@@ -50,18 +52,8 @@ public class PlayerTeleport : MonoBehaviour
 
         else if (OVRInput.Get(OVRInput.Button.Two))
         {
-            playerController.enabled = false;
-
-            player.position = groundPoint.position;
-            playerController.enabled = true;
+            SpawnBackToGround();
         }
-
-        /*
-        if (Input.GetKeyDown(KeyCode.B) || OVRInput.GetDown(OVRInput.Button.Three))
-        {
-            ToggleCanvas();
-        }
-        */
     }
 
     private void ToggleCanvas()
@@ -77,10 +69,24 @@ public class PlayerTeleport : MonoBehaviour
             informationCanvas.SetActive(true);
     }
 
-    private void GroundToBalconyTeleport()
+    public void GroundToBalconyTeleport()
     {
         countdownCanvas.SetActive(true);
         StartCoroutine(nameof(GroundToBalconyCountdown));
+    }
+
+    public void SpawnBackToGround ()
+    {
+        playerController.enabled = false;
+
+        player.position = groundPoint.position;
+        playerController.enabled = true;
+    }
+
+    IEnumerator SpawnBack()
+    {
+        yield return thirtySeconds;
+        SpawnBackToGround();
     }
 
     IEnumerator GroundToBalconyCountdown()
@@ -100,6 +106,8 @@ public class PlayerTeleport : MonoBehaviour
 
         TeleportPlayer(balconyPointTransform);
         countdownCanvas.SetActive(false);
+
+        StartCoroutine(nameof(SpawnBack));
     }
 
     private void TeleportPlayer(Transform _endPositionTransform)
