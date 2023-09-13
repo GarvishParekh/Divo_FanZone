@@ -230,11 +230,11 @@ public class LocomotionTeleport : MonoBehaviour
     public bool IsPostTeleportRequested;
 
     /// <summary>
-    /// Created at runtime, this gameobject is used to track where the player will teleport.
+    /// Created at runtime, this gameobject is used to track where the playerTransform will teleport.
     /// The actual position depends on the type of Aim Handler and Target Handler that is active.
     /// Aim Handlers:
-    /// * Laser: player capsule swept along aim ray until it hits terrain or valid target.
-    /// * Parabolic: player capsule swept along a series of line segments approximating a parabolic curve until it hits terrain or valid target.
+    /// * Laser: playerTransform capsule swept along aim ray until it hits terrain or valid target.
+    /// * Parabolic: playerTransform capsule swept along a series of line segments approximating a parabolic curve until it hits terrain or valid target.
     /// Target Handlers:
     /// * NavMesh = Destination only valid if it lies within the nav mesh.
     /// * Node = Destination valid if within radius of a teleport node. Target is invalidated when aim leaves the node radius.
@@ -301,7 +301,7 @@ public class LocomotionTeleport : MonoBehaviour
     /// <summary>
     /// AimCollisionTest is used by many of the aim handlers to standardize the testing of aiming beams. By choosing between the increasingly restrictive
     /// point, sphere and capsule tests, the aiming system can limit targeting to routes which are not physically blocked. For example, a sphere test
-    /// is good for ensuring the player can't teleport through bars to get out of a jail cell.
+    /// is good for ensuring the playerTransform can't teleport through bars to get out of a jail cell.
     /// </summary>
     /// <param name="start"></param>
     /// <param name="end"></param>
@@ -495,7 +495,7 @@ public class LocomotionTeleport : MonoBehaviour
     /// Note that the set of points provided here can be different from the points used by the Aim Handler to
     /// determine the teleport destination. For instance, the aim handler might use a very long line segment
     /// for an aim laser but would provide a shorter line segment in the AimData representing the line
-    /// from the player to the teleport destination.
+    /// from the playerTransform to the teleport destination.
     /// </summary>
     public class AimData
     {
@@ -705,9 +705,9 @@ public class LocomotionTeleport : MonoBehaviour
     /// enabled and attached to this event. There may be other handlers attached to this event to trigger
     /// sound effects or gameplay logic to respond to the teleport event.
     ///
-    /// The transition handler is responsible for actually moving the player to the destination, and can achieve
+    /// The transition handler is responsible for actually moving the playerTransform to the destination, and can achieve
     /// this goal however it wants. Example teleport transition handlers include:
-    /// * Instant - Just move the player with no delay or effect.
+    /// * Instant - Just move the playerTransform with no delay or effect.
     /// * Blink - Fade the camera to black, teleport, then fade back up.
     /// * Warp - Translate the camera over some fixed amount of time to the new destination.
     /// </summary>
@@ -715,9 +715,9 @@ public class LocomotionTeleport : MonoBehaviour
 
     /// <summary>
     /// This coroutine will yield until IsTransitioning back to false, which will be immediately unless there
-    /// is a transition handler that needs to take some time to move the player to the new location.
+    /// is a transition handler that needs to take some time to move the playerTransform to the new location.
     /// This allows transition handlers to take as much (or little) time as they need to complete their task
-    /// of moving the player to the teleport destination.
+    /// of moving the playerTransform to the teleport destination.
     /// </summary>
     protected IEnumerator TeleportingStateCoroutine()
     {

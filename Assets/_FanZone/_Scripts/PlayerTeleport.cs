@@ -5,28 +5,31 @@ using System.Collections;
 
 public class PlayerTeleport : MonoBehaviour
 {
+    [Header (" Photon Elements ")]
     [SerializeField] private PhotonView photonView;
     [SerializeField] private Animator playerAnimation;
 
-    [Space]
-    [SerializeField] private Transform player;
+    [Header (" Unity Components ")]
+    [SerializeField] private Transform playerTransform;
+    
+    [Header (" Spawn Points ")]
     [SerializeField] private Transform balconyPointTransform;
-    [SerializeField] private Transform groundPoint;
+    [SerializeField] private Transform groundTransform;
 
-    [Header("Canvas")]
+    [Header(" User Interface ")]
     [SerializeField] private GameObject informationCanvas;
     [SerializeField] private GameObject countdownCanvas;
     [SerializeField] private TMP_Text T_countdown;
 
-    [Space]
-    [SerializeField] private OVRPlayerController playerController;
+    [Header(" Oculus Elements ")]
+    [SerializeField] private OVRPlayerController oculusController;
 
-    private WaitForSeconds oneSecond = new WaitForSeconds(1);
-
+    [Header(" Checks ")]
     [SerializeField] private bool isTeleproting = false;
     [SerializeField] private bool teloportWithButtons = false;
 
-    WaitForSeconds thirtySeconds = new WaitForSeconds(4);
+    private WaitForSeconds oneSecond = new WaitForSeconds(1);
+    WaitForSeconds thirtySeconds = new WaitForSeconds(30);
 
 
     private void Start()
@@ -39,16 +42,20 @@ public class PlayerTeleport : MonoBehaviour
 
     private void Update()
     {
-        if (!photonView.IsMine)
-            return;
-
-        if (isTeleproting)
-            return;
+        #region Testing
+        // if playerTransform is already spawning
+        if (isTeleproting) return;
 
         if (!teloportWithButtons) return;
-        
+
+        SpawnPlayerWithButtons(); 
+        #endregion
+    }
+
+    private void SpawnPlayerWithButtons ()
+    {
         // Teleport to the balcony
-        if (OVRInput.Get(OVRInput.Button.One)) 
+        if (OVRInput.Get(OVRInput.Button.One))
             GroundToBalconyTeleport();
 
         // Teleport to the ground
@@ -69,29 +76,29 @@ public class PlayerTeleport : MonoBehaviour
             informationCanvas.SetActive(true);
     }
 
+    #region Public Functions For Spawning
     public void GroundToBalconyTeleport()
     {
         countdownCanvas.SetActive(true);
         StartCoroutine(nameof(GroundToBalconyCountdown));
     }
 
-    public void SpawnBackToGround ()
+    public void SpawnBackToGround()
     {
-        playerController.enabled = false;
+        oculusController.enabled = false;
 
-        player.position = groundPoint.position;
-        playerController.enabled = true;
-    }
+        playerTransform.position = groundTransform.position;
+        oculusController.enabled = true;
+    } 
+    #endregion
 
-    IEnumerator SpawnBack()
-    {
-        yield return thirtySeconds;
-        SpawnBackToGround();
-    }
-
+    #region Spawning Functions
+    // Spawn to balcony
     IEnumerator GroundToBalconyCountdown()
     {
         isTeleproting = true;
+
+        // countdown for user
         for (int i = 0; i < 6; i++)
         {
             T_countdown.gameObject.SetActive(false);
@@ -102,19 +109,28 @@ public class PlayerTeleport : MonoBehaviour
         }
         isTeleproting = false;
 
-        player.position = balconyPointTransform.position;
+        playerTransform.position = balconyPointTransform.position;
 
         TeleportPlayer(balconyPointTransform);
         countdownCanvas.SetActive(false);
 
+        // spawn the playerTransform back to ground
         StartCoroutine(nameof(SpawnBack));
     }
 
+    // Spawn to ground
+    IEnumerator SpawnBack()
+    {
+        yield return thirtySeconds;
+        SpawnBackToGround();
+    } 
+    #endregion
+
     private void TeleportPlayer(Transform _endPositionTransform)
     {
-        playerController.enabled = false;
+        oculusController.enabled = false;
 
-        player.position = _endPositionTransform.position;
-        playerController.enabled = true;
+        playerTransform.position = _endPositionTransform.position;
+        oculusController.enabled = true;
     }
 }

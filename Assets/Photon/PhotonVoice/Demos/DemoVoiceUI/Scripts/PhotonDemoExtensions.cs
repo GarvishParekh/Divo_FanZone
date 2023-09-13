@@ -5,7 +5,7 @@
 
     public static partial class PhotonDemoExtensions // todo: USE C.A.S. ALWAYS
     {
-        // this demo uses a Custom Property (as explained in the Realtime API), to sync if a player muted her microphone. that value needs a string key.
+        // this demo uses a Custom Property (as explained in the Realtime API), to sync if a playerTransform muted her microphone. that value needs a string key.
         internal const string MUTED_KEY      = "mu";
         internal const string PHOTON_VAD_KEY = "pv";
         internal const string WEBRTC_AEC_KEY = "ec";

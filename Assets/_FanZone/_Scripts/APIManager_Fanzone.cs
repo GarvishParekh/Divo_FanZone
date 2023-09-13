@@ -7,20 +7,18 @@ public class APIManager_Fanzone : MonoBehaviour
 {
     public static Action ApiRecived;
 
+    [Header (" API Elements ")]
     [SerializeField] private string apiURL;
-    [SerializeField] private string fanzoneData;
+    [SerializeField] private string fanzoneAPIData;
 
-    [Space]
+    [Header (" API Settings ")]
     public string authToken;
     public string acceptToken;
 
-    [Space]
+    [Header (" API Classes ")]
     public myData myData;
 
-    private void Start()
-    {
-        StartCoroutine("CallAPI", apiURL);
-    }
+    private void Start() => StartCoroutine("CallAPI", apiURL);
 
     IEnumerator CallAPI(string apiURL)
     {
@@ -33,15 +31,15 @@ public class APIManager_Fanzone : MonoBehaviour
 
         if(request.error == null)
         {
-            fanzoneData = request.downloadHandler.text;
+            fanzoneAPIData = request.downloadHandler.text;
 
-            myData = JsonUtility.FromJson<myData>(fanzoneData);
-
+            myData = JsonUtility.FromJson<myData>(fanzoneAPIData);
             ApiRecived?.Invoke();
         }
     }
 }
 
+#region API Classes
 [System.Serializable]
 public class myData
 {
@@ -67,4 +65,5 @@ public class Slots
     public string token;
     public string s3_value;
     public string type;
-}
+} 
+#endregion

@@ -41,7 +41,7 @@ public class CharacterCameraConstraint : MonoBehaviour
     public LayerMask CollideLayers;
 
     /// <summary>
-    /// Offset is added to camera's real world height, effectively treating it as though the player was
+    /// Offset is added to camera's real world height, effectively treating it as though the playerTransform was
     /// taller/standing higher.
     /// </summary>
     [Tooltip("Offset is added to camera's real world height, effectively treating it as though the player was " +
@@ -117,7 +117,7 @@ public class CharacterCameraConstraint : MonoBehaviour
         }
 
         // Offset the camera into the capsule that's used so that it doesn't scrape any
-        // overhanging geometry that the player can barely fit through.  Currently just
+        // overhanging geometry that the playerTransform can barely fit through.  Currently just
         // based on where we start fading.
         float capsuleOffset = FADE_RAY_LENGTH;
 

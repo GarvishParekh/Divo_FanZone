@@ -87,7 +87,7 @@ namespace ExitGames.Demos.DemoPunVoice
         {
             // Create a boolean that is true if either of the input axes is non-zero.
             bool walking = h != 0 || v != 0;
-            // Tell the animator whether or not the player is walking.
+            // Tell the animator whether or not the playerTransform is walking.
             this.animator.SetBool("IsWalking", walking);
         }
 
@@ -104,7 +104,7 @@ namespace ExitGames.Demos.DemoPunVoice
 #endif  
             // send input to the animator
             this.UpdateAnimator(this.h, this.v);
-            // Move the player around the scene.
+            // Move the playerTransform around the scene.
             this.Move(this.h, this.v);
         }
 
