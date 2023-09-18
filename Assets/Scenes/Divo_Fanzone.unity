@@ -9792,8 +9792,8 @@ MonoBehaviour:
       user_id: 
   T_eventID: {fileID: 1859166975}
   userIDToCall: 
-  userIDs: 7100000015000000080000001c000000
-  isTesting: 0
+  userIDs: 7100000015000000080000001c00000081000000
+  isTesting: 1
 --- !u!114 &1117136364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17498,7 +17498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerID: 0
   T_yourID: {fileID: 127404979}
-  isPlayer: 0
+  isPlayer: 1
 --- !u!1001 &1710918054
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ public class UserCollisionCheck : MonoBehaviour
         }
         else
         {
-            ChangeEventID(155);
+            ChangeEventID(156);
         }
     }
 
@@ -118,7 +118,7 @@ public class UserCollisionCheck : MonoBehaviour
             photonView.RPC(nameof(CallPlayerForMeeting), RpcTarget.All, userIDToCall);
         else
         {
-            StartCoroutine(GetRequest(finalURL));
+            //StartCoroutine(GetRequest(finalURL));
         }
     } 
     #endregion
