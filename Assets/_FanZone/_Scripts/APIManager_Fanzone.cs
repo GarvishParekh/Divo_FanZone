@@ -7,15 +7,15 @@ public class APIManager_Fanzone : MonoBehaviour
 {
     public static Action ApiRecived;
 
-    [Header (" API Elements ")]
+    [Header(" API Elements ")]
     [SerializeField] private string apiURL;
     [SerializeField] private string fanzoneAPIData;
 
-    [Header (" API Settings ")]
+    [Header(" API Settings ")]
     public string authToken;
     public string acceptToken;
 
-    [Header (" API Classes ")]
+    [Header(" API Classes ")]
     public myData myData;
 
     private void Start() => StartCoroutine("CallAPI", apiURL);
@@ -23,13 +23,13 @@ public class APIManager_Fanzone : MonoBehaviour
     IEnumerator CallAPI(string apiURL)
     {
         UnityWebRequest request = UnityWebRequest.Get(apiURL);
-        
+
         request.SetRequestHeader("Authorization", authToken);
         request.SetRequestHeader("Accept", acceptToken);
-        
+
         yield return request.SendWebRequest();
 
-        if(request.error == null)
+        if (request.error == null)
         {
             fanzoneAPIData = request.downloadHandler.text;
 
@@ -65,5 +65,5 @@ public class Slots
     public string token;
     public string s3_value;
     public string type;
-} 
+}
 #endregion

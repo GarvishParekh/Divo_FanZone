@@ -7,18 +7,18 @@ using System.Collections.Generic;
 
 public class UserCollisionCheck : MonoBehaviour
 {
-    [Header (" Scripts Ref ")]
+    [Header(" Scripts Ref ")]
     [SerializeField] private APIManager_Fanzone apiManager;
     [SerializeField] private PlayerInfo playerIDInstance;
     [SerializeField] private PlayerTeleport playerTeleportInstance;
-    
-    [Header (" Photon Elemets ")]
+
+    [Header(" Photon Elemets ")]
     [SerializeField] private PhotonView photonView;
 
-    [Header (" API Elemets ")]
+    [Header(" API Elemets ")]
     public string getUserURL;
     public string getUserStaticURL;
-    public  string finalURL;
+    public string finalURL;
     [SerializeField] private string apiData;
     [SerializeField] private UserData userData;
 
@@ -27,17 +27,17 @@ public class UserCollisionCheck : MonoBehaviour
 
     [Space]
     [SerializeField] private string userIDToCall;
-    
+
     WaitForSeconds thirtySeconds = new WaitForSeconds(5);
 
-    [Header (" User Data")]
+    [Header(" User Data")]
     [SerializeField] List<int> userIDs;
 
     public bool isTesting = false;
 
     private void Start()
     {
-        if(isTesting)
+        if (isTesting)
         {
             finalURL = getUserStaticURL;
         }
@@ -47,18 +47,9 @@ public class UserCollisionCheck : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (!other.CompareTag ("Network Player"))
-        {
-            Debug.Log("User not entered");
-        }
-        
-    }
-
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag ("Network Player"))
+        if (other.CompareTag("Network Player"))
         {
             PlayerCheck();
         }
@@ -79,10 +70,10 @@ public class UserCollisionCheck : MonoBehaviour
         }
     }
 
-    public void ChangeEventID (int _eventID)
+    public void ChangeEventID(int _eventID)
     {
         finalURL = getUserURL + _eventID.ToString();
-        T_eventID.text = $"Current Event: {_eventID}";   
+        T_eventID.text = $"Current Event: {_eventID}";
     }
 
     #region Get User ID To Spawn
@@ -108,7 +99,7 @@ public class UserCollisionCheck : MonoBehaviour
 
         for (int i = 0; i < userIDs.Count; i++)
         {
-            if(userIDToCall == userIDs[i].ToString())
+            if (userIDToCall == userIDs[i].ToString())
                 idMatched = true;
             else
                 idMatched = false;
@@ -120,7 +111,7 @@ public class UserCollisionCheck : MonoBehaviour
         {
             //StartCoroutine(GetRequest(finalURL));
         }
-    } 
+    }
     #endregion
 }
 
@@ -135,6 +126,6 @@ public class UserData
 public class UserData_data
 {
     public string user_id;
-} 
+}
 #endregion
 
