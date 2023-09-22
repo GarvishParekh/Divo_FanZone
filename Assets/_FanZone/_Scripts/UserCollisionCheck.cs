@@ -7,8 +7,8 @@ using System.Collections.Generic;
 
 public class UserCollisionCheck : MonoBehaviour
 {
+    [SerializeField] private APIInformation apiInformation;
     [Header(" Scripts Ref ")]
-    [SerializeField] private APIManager_Fanzone apiManager;
     [SerializeField] private PlayerInfo playerIDInstance;
     [SerializeField] private PlayerTeleport playerTeleportInstance;
 
@@ -16,8 +16,6 @@ public class UserCollisionCheck : MonoBehaviour
     [SerializeField] private PhotonView photonView;
 
     [Header(" API Elemets ")]
-    public string getUserURL;
-    public string getUserStaticURL;
     public string finalURL;
     [SerializeField] private string apiData;
     [SerializeField] private UserData userData;
@@ -25,9 +23,8 @@ public class UserCollisionCheck : MonoBehaviour
     [Header(" User Interface ")]
     [SerializeField] private TMP_Text T_eventID;
 
-    [Space]
-    [SerializeField] private string userIDToCall;
 
+    string userIDToCall;
     WaitForSeconds thirtySeconds = new WaitForSeconds(5);
 
     [Header(" User Data")]
@@ -37,25 +34,13 @@ public class UserCollisionCheck : MonoBehaviour
 
     private void Start()
     {
-        if (isTesting)
-        {
-            finalURL = getUserStaticURL;
-        }
-        else
-        {
-            ChangeEventID(156);
-        }
+        if (apiInformation.testing) finalURL = apiInformation.GetUserURL_Static;
+        
+        else ChangeEventID(156);
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Network Player"))
-        {
-            PlayerCheck();
-        }
-    }
 
-    public void PlayerCheck()
+    public void CallGetUserAPI()
     {
         if (playerIDInstance.isPlayer)
             StartCoroutine(GetRequest(finalURL));
@@ -65,14 +50,12 @@ public class UserCollisionCheck : MonoBehaviour
     void CallPlayerForMeeting(string _userID)
     {
         if (playerIDInstance.playerID.ToString() == _userID)
-        {
             playerTeleportInstance.GroundToBalconyTeleport();
-        }
     }
 
     public void ChangeEventID(int _eventID)
     {
-        finalURL = getUserURL + _eventID.ToString();
+        finalURL = apiInformation.GetUserURL + _eventID.ToString();
         T_eventID.text = $"Current Event: {_eventID}";
     }
 
@@ -80,11 +63,10 @@ public class UserCollisionCheck : MonoBehaviour
     IEnumerator GetRequest(string URL)
     {
         Debug.Log("Get player");
-        bool idMatched = false;
         UnityWebRequest request = UnityWebRequest.Get(URL);
 
-        request.SetRequestHeader("Authorization", apiManager.authToken);
-        request.SetRequestHeader("Accept", apiManager.acceptToken);
+        request.SetRequestHeader("Authorization", apiInformation.AuthToken);
+        request.SetRequestHeader("Accept", apiInformation.AcceptToken);
 
         yield return request.SendWebRequest();
         if (request.error == null)
@@ -97,20 +79,7 @@ public class UserCollisionCheck : MonoBehaviour
             Debug.Log($"User ID: {userIDToCall}");
         }
 
-        for (int i = 0; i < userIDs.Count; i++)
-        {
-            if (userIDToCall == userIDs[i].ToString())
-                idMatched = true;
-            else
-                idMatched = false;
-        }
-
-        if (idMatched)
-            photonView.RPC(nameof(CallPlayerForMeeting), RpcTarget.All, userIDToCall);
-        else
-        {
-            //StartCoroutine(GetRequest(finalURL));
-        }
+        photonView.RPC(nameof(CallPlayerForMeeting), RpcTarget.All, userIDToCall);
     }
     #endregion
 }

@@ -4328,10 +4328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ff6bf3cd46c094f9e953296cb68bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiURL: https://divo-test-admin.theintellify.net/api/v1/environments/details/fanzone
+  apiInformation: {fileID: 11400000, guid: 3fc8a2f82ec0c1c4eb1da985e90a6840, type: 2}
   fanzoneAPIData: 
-  authToken: Bearer 98|Jf4khbJtDMPTDxuU2LxyzactvauQKJCqnFhcJraM
-  acceptToken: application/json
   myData:
     data:
     - id: 
@@ -8809,12 +8807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd94febd1569344b9a0c0be22971351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiManager: {fileID: 757159947}
+  apiInformation: {fileID: 11400000, guid: 3fc8a2f82ec0c1c4eb1da985e90a6840, type: 2}
   playerIDInstance: {fileID: 1706834674}
   playerTeleportInstance: {fileID: 1706834671}
   photonView: {fileID: 1117136364}
-  getUserURL: https://divo-test-admin.theintellify.net/api/v1/events/get_spawn_user/
-  getUserStaticURL: https://divo-test-admin.theintellify.net/api/v1/events/get_spawn_dummy/129
   finalURL: 
   apiData: 
   userData:
@@ -8858,6 +8854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19617bbf0d9b5564c957a17d24c2e83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider: []
   boxSize: {x: 4.94, y: 2.17, z: 20.43}
   tagToFind: Player
   timer: 0

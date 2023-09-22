@@ -8,24 +8,25 @@ public class APIManager_Fanzone : MonoBehaviour
     public static Action ApiRecived;
 
     [Header(" API Elements ")]
-    [SerializeField] private string apiURL;
+    [SerializeField] private APIInformation apiInformation;
+    //[SerializeField] private string apiURL;
     [SerializeField] private string fanzoneAPIData;
 
-    [Header(" API Settings ")]
-    public string authToken;
-    public string acceptToken;
+    //[Header(" API Settings ")]
+    //public string authToken;
+    //public string acceptToken;
 
     [Header(" API Classes ")]
     public myData myData;
 
-    private void Start() => StartCoroutine("CallAPI", apiURL);
+    private void Start() => StartCoroutine("CallAPI", apiInformation.GetImageURL);
 
     IEnumerator CallAPI(string apiURL)
     {
         UnityWebRequest request = UnityWebRequest.Get(apiURL);
 
-        request.SetRequestHeader("Authorization", authToken);
-        request.SetRequestHeader("Accept", acceptToken);
+        request.SetRequestHeader("Authorization", apiInformation.AuthToken);
+        request.SetRequestHeader("Accept", apiInformation.AcceptToken);
 
         yield return request.SendWebRequest();
 

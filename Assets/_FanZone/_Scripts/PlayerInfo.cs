@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -12,7 +11,6 @@ public class PlayerInfo : MonoBehaviour
     
     [Header (" Checks ")]
     public bool isPlayer = false;
-
 
     public void SetPlayerID (int _id)
     {

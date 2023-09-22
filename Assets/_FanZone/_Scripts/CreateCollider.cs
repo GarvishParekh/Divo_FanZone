@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CreateCollider : MonoBehaviour
 {
+    [SerializeField] Collider[] _collider;
     [SerializeField] private Vector3 boxSize;
     [SerializeField] private string tagToFind;
     [SerializeField] private float timer;
@@ -23,7 +24,7 @@ public class CreateCollider : MonoBehaviour
     void CheckForPlayer()
     {
         bool isMeetingOn = false;
-        Collider[] _collider = Physics.OverlapBox(transform.position, boxSize);
+        _collider = Physics.OverlapBox(transform.position, boxSize);
 
         foreach (var _objects in _collider)
         {
@@ -43,7 +44,7 @@ public class CreateCollider : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.black;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, boxSize * 2);
     }
 }
