@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/_FanZone/Scenes/Divo_Fanzone.unity
+    path: Assets/_FanZone/Divo Scenes/Divo_Fanzone.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/_FanZone/Scenes/Character Creation.unity
+    path: Assets/_FanZone/Divo Scenes/Character Creation Old.unity
     guid: db32476ba3a19a243be9d671fecbbdc3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9e2b356d6e706844b8a5fb44198b7f3d, type: 2}

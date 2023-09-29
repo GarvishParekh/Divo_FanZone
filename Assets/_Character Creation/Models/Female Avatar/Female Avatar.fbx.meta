@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: 3e6e0550be01dd245b1e8c880b366af3
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 4166214297228353935
+    second: Female_BKD_RestPose
+  - first:
+      74: 6561224522807349988
+    second: Female_BKD_Kick
+  - first:
+      74: 480825160147471216
+    second: Female_BKD_Walk Strafe Left
+  - first:
+      74: -1121249609027463237
+    second: Female_BKD_Walk Strafe Right
+  - first:
+      74: 6681250367620851324
+    second: Female_BKD_Walk_Forwards
+  - first:
+      74: 3625200270918804883
+    second: Female_BKD_Walking Backwards
+  - first:
+      74: -3739274477768725690
+    second: Female_BKD_Idle
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Avi_Cohen_retro_shirt_Mat.001
+    second: {fileID: 2100000, guid: 8fc0808470cbb4949af399a8f4b85969, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aviator Glass
+    second: {fileID: 2100000, guid: ff0bab66662acb548b8c6f53582a3d01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aviator_Mat
+    second: {fileID: 2100000, guid: 7a9dbea146756a44899c5b81a1b85fbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Away_Kit_2023_2025
+    second: {fileID: 2100000, guid: 2fb570b06217f97488d507219fbc10a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Away_game_shirt_2021_22_Mat
+    second: {fileID: 2100000, guid: 0e40ee3571bb27d47a3d43574bc91710, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Away_match_shirt_2022_23_men_Mat
+    second: {fileID: 2100000, guid: 6cc475978c44e8045868ced9d56aabba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Game_shirt_2020_2021_Men_Mat.001
+    second: {fileID: 2100000, guid: d59edd4aaf73afd4bb9a7a749605527a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Game_shirt_button_mat.001
+    second: {fileID: 2100000, guid: 62d21cf03c8e01149bdafdca8e3b2039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue_Maccabism_shirt_Mat.001
+    second: {fileID: 2100000, guid: 20795e2c3386b864a8bee55656b5886c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body_Mat.001
+    second: {fileID: 2100000, guid: 955cdeb47caedb241afbc1283c121f78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cateye_Mat.001
+    second: {fileID: 2100000, guid: 54d43bcc091fa224f9264ade3bc49058, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Jogger_Mat.001
+    second: {fileID: 2100000, guid: c972323c7755d1446aab233bbe2e832e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Tshirt_Mat
+    second: {fileID: 2100000, guid: d6db2a7ade90d1f438cfabd276db5dd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Denim_Mat
+    second: {fileID: 2100000, guid: d8239c49a925eaf49bf7991a441fb792, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye Mat
+    second: {fileID: 2100000, guid: 7f88709533cd6704cb294298a293103c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_brimmed_cap_Mat
+    second: {fileID: 2100000, guid: 52785a7b51dbeaf4db62b2dcecd7fbd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fourth_Match_shirt_2021_2022_children_Mat.001
+    second: {fileID: 2100000, guid: 16b8530da4c64c346ae35ad302f1c1d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_01_Mat
+    second: {fileID: 2100000, guid: ca755da3cb3b1f642a0134da71a91f3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_02_Mat
+    second: {fileID: 2100000, guid: 637916f3c10c18745ab706bb0ab80c61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_03_mat.005
+    second: {fileID: 2100000, guid: c1c24a6f43f6c4942bc6feecb4642aa2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_04_mat
+    second: {fileID: 2100000, guid: de4d09894f902164a885b84de7cd3093, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_05_Mat
+    second: {fileID: 2100000, guid: 32e04ca8062a6cd4f9d35f695fe0cac5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hat_Mat.001
+    second: {fileID: 2100000, guid: 0de798997be96eb4ea4f62a22b87991e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: High_Ankle_Sneaker_Mat.001
+    second: {fileID: 2100000, guid: 745879c235c088948ade1a72d367443f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Home set home Yellow Blue Adidas Mat
+    second: {fileID: 2100000, guid: b9264cf85e76d824aaff510abb63ae1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HomeKit_2023_2024_Mat.001
+    second: {fileID: 2100000, guid: 2fa9854f128f34746bdc8e83e8074a23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Home_Jersey_Mat.001
+    second: {fileID: 2100000, guid: 6636584fd4f2a184b9eca40591eefa7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Home_game_shirt_for_a_boy_Mat.001
+    second: {fileID: 2100000, guid: d2d6fa4e82548e8409562d1dfca2779d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Home_game_shirt_for_boy_2019_20_Mat
+    second: {fileID: 2100000, guid: 87903e3709f9c08419b4abd56c388dde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Home_set_yellow_horse_visage_Button_Mat
+    second: {fileID: 2100000, guid: a8db2b34ea606f04991e6e21575b6fac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Home_set_yellow_horse_visage_Mat
+    second: {fileID: 2100000, guid: 8dd016cb72960724c89331c829912be7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jeans_pants_Mat
+    second: {fileID: 2100000, guid: e938b960341e262419a9cc2a910982c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jogger_black_Mat
+    second: {fileID: 2100000, guid: 294a3330c3bb3f44cadedb69a222b802, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MH1_Mat
+    second: {fileID: 2100000, guid: df3cae610e2514b4da36408bc8f029e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MH2_Mat
+    second: {fileID: 2100000, guid: bc2f063c4cb595441923f2b1783c2eec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Match_2021_22_shirt_for_men_Mat.001
+    second: {fileID: 2100000, guid: 9a577a85856983e4e94676b0ecc8d215, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: New_Kit_Player_tshirt_Mat
+    second: {fileID: 2100000, guid: 6a93aae30bfca8c4a9745c784d6fdbe1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Retro_2022_Shirt_Blue_White_Mat1
+    second: {fileID: 2100000, guid: 0dadd88ddc3c0644aa27eae01b46206d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Retro_blue_white_shirt_78_792
+    second: {fileID: 2100000, guid: aa98fe14933645b428dfc99b0c25bd17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Retro_game_shirt_1976_1977_Mat.001
+    second: {fileID: 2100000, guid: b72a39c3287d18943b0ef6884788601f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Retro_match_shirt_1991_92_Mat.001
+    second: {fileID: 2100000, guid: 3c35b004af63acf44bcc46afc2de6205, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scarf_Mat1.001
+    second: {fileID: 2100000, guid: e991ab00b97cf8b46950d3f7080e1733, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shorts_Mat
+    second: {fileID: 2100000, guid: fd4d655e4b9fc75498b8951ddcc1841d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Third_Set_Blue_White_Visa_squares_Button_Mat.001
+    second: {fileID: 2100000, guid: 27c4356085cf91e43a96f867f3c8f473, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Third_Set_Blue_White_Visa_squares_Mat.001
+    second: {fileID: 2100000, guid: 73ca936a0607a2e448a6318277533fc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Third_game_shirt_for_boy_2020_21_Button_mat
+    second: {fileID: 2100000, guid: 913eecd2eb6655242bbd6103b2460a0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Third_game_shirt_for_boy_2020_21_Mat
+    second: {fileID: 2100000, guid: 3652a86567630f64c9c6f81be68193b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Training_shirt_2020_21_men_Mat
+    second: {fileID: 2100000, guid: 0bbbbf3de1da45e4484f28d809404c24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wayfarer_Frame_Mat
+    second: {fileID: 2100000, guid: d0c6e2049cf2d8241ac1709a64115489, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wayfarer_Glass_Mat
+    second: {fileID: 2100000, guid: 99d8c7388bd3bf54392fbabdabb70b5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow_blue_retro_shirt_78_79_Mat
+    second: {fileID: 2100000, guid: d15d85ba93c5b8a43a2de8993f180c8f, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

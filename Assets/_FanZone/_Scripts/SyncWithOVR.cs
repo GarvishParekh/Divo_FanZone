@@ -80,7 +80,7 @@ public class SyncWithOVR : MonoBehaviour
         #endregion
 
         #region Head
-        headPosition.x = OvrCameraRig.position.x;
+        headPosition.x = OvrCameraRig.position.x + controllerOffsetValue.x;
         headPosition.y = OvrPlayerController.position.y + controllerOffsetValue.y;
         headPosition.z = OvrCameraRig.position.z;
 

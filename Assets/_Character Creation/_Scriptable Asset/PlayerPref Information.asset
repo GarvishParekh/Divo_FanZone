@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d6195c81acc874b88a575ee0346f49, type: 3}
+  m_Name: PlayerPref Information
+  m_EditorClassIdentifier: 
+  alreadyMade: Already Made
+  userGender: User Gender
+  userBodyType: User Body Type
+  userBodyColor: User Body Color
+  malePrefab:
+    tShirtEquipped: Male TShirt Equipped
+    trouserEquipped: Male Trouser Equipped
+    hairEquipped: Male Hair Equipped
+    facialHairEquipped: Male Facial Hair Equipped
+    hatEquipped: Male Hat Equipped
+    footwearEquipped: Male Footwear Equipped
+    sunglassesEquipped: Male Sunglasses Equipped
+  femalePrefab:
+    tShirtEquipped: Female TShirt Equipped
+    trouserEquipped: female Trouser Equipped
+    hairEquipped: female Hair Equipped
+    hatEquipped: Female Hat Equipped
+    footwearEquipped: Female Footwear Equipped
+    sunglassesEquipped: Female Sunglasses Equipped
