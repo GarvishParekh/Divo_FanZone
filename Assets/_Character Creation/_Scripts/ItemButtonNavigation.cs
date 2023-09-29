@@ -74,6 +74,7 @@ public class ItemButtonNavigation : MonoBehaviour
     public void FinalConfirmButton()
     {
         PlayerPrefs.SetInt(playerPrefTag.alreadyMade, 1);
+        SceneManager.LoadScene("Divo_Fanzone");
     }
     
     public void OpenPanel(GameObject desireCanvas)
